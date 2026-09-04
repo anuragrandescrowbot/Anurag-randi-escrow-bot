@@ -769,9 +769,7 @@ bot.command('deal', async (ctx) => {
         `🙎🏻‍♂️ Seller: ${escapeHtml(deal.seller)}\n` +
         `💰 Amount: ₹${escapeHtml(deal.amount)}\n` +
         `🧾 Fees: ₹${calculateFee(parseFloat((deal.amount || '0').replace(/[₹,]/g, '')) || 0).toFixed(2)}\n` +
-        extraLines +
-        `━━━━━━━━━━━━━━━\n` +
-        `⚙️ Powered by @MRIXDUFR`;
+        extraLines +;
 
     await replyToMessage(ctx, msg, { parse_mode: 'HTML' });
 });
@@ -825,8 +823,6 @@ bot.command('stats', async (ctx) => {
             `📊 Escrow Stats — ${displayName}\n` +
             `━━━━━━━━━━━━━━━\n` +
             `No escrow history found for this user.\n` +
-            `━━━━━━━━━━━━━━━\n` +
-            `⚙️ Powered by @MRIXDUFR`
         );
         return;
     }
@@ -853,8 +849,7 @@ bot.command('stats', async (ctx) => {
         `💰 Total Volume: ₹${totalVolume.toFixed(2)}\n` +
         `🧑‍💼 As Buyer: ${asBuyer.length} deals\n` +
         `🙎🏻‍♂️ As Seller: ${asSeller.length} deals\n` +
-        `━━━━━━━━━━━━━━━\n` +
-        `⚙️ Powered by @MRIXDUFR`;
+        `━━━━━━━━━━━━━━━\n` +;
 
     await replyToMessage(ctx, msg);
 });
@@ -887,8 +882,7 @@ bot.command('mydeals', async (ctx) => {
         `━━━━━━━━━━━━━━━\n` +
         `🧑‍💼 Total Escrows Closed: ${String(count).padStart(3, '0')}\n\n` +
         `💰 INR Deals: ${String(count).padStart(3, '0')} | ₹${total.toFixed(2)}\n` +
-        `━━━━━━━━━━━━━━━\n` +
-        `⚙️ Powered by @MRIXDUFR`;
+        `━━━━━━━━━━━━━━━\n` +;
 
     await replyToMessage(ctx, msg);
 });
@@ -929,8 +923,7 @@ bot.command('allstats', async (ctx) => {
         `⏳ Pending: ${pending}\n` +
         `━━━━━━━━━━━━━━━\n` +
         `💰 Total Volume (Completed): ₹${totalVolume.toFixed(2)}\n` +
-        `━━━━━━━━━━━━━━━\n` +
-        `⚙️ Powered by @MRIXDUFR`;
+        `━━━━━━━━━━━━━━━\n` +;
 
     await replyToMessage(ctx, msg);
 });
@@ -1015,8 +1008,7 @@ bot.command('info', async (ctx) => {
         `━━━━━━━━━━━━━━━\n` +
         `✅ Total Escrows: ${result.rowCount}\n` +
         `💰 Escrow Amount: ₹${totalAmount.toFixed(2)}\n` +
-        `━━━━━━━━━━━━━━━\n` +
-        `⚙️ Powered by @MRIXDUFR`;
+        `━━━━━━━━━━━━━━━\n` +;
 
     await replyToMessage(ctx, msg);
 });
